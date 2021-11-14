@@ -22,3 +22,8 @@ bindkey '^[[F' end-of-line
 bindkey -s "^o" 'micro $(fzf)^M'
 
 bindkey "^R" history-incremental-search-backward
+
+# alias stuff
+alias l ="ls -l"
+alias la="ls -la"
+alias lh="ls -halt"
