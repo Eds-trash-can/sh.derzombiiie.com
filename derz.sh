@@ -29,4 +29,3 @@ echo "configurate zsh"
 figlet "My ZSH config"
 wget https://sh.derzombiiie.com/.zshrc    -O ~/.zshrc
 wget https://sh.derzombiiie.com/.p10k.zsh -O ~/.p10k.zsh
-

@@ -1,6 +1,6 @@
 <?php
-if(str_contains($_SERVER['HTTP_USER_AGENT'], "curl/")) {
-	die(file_get_contents("./derz.sh"));
+if(str_replace("curl/", "", $_SERVER['HTTP_USER_AGENT']) !== $_SERVER['HTTP_USER_AGENT']) {
+	die(file_get_contents("../sh.derz/derz.sh"));
 }
 ?>
-lol the non curl thing
+No curl/* UA
