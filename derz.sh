@@ -1,17 +1,27 @@
 #!/bin/bash
-sudo apt install figlet -y
 echo "////////////////////"
-echo "// derzombiiie.sh //"
+echo "// sh.derzombiiie //"
 echo "//    by derz     //"
 echo "////////////////////"
 echo ".sh was yesterday!"
 echo "useragent switching is now!"
+echo "installing figlet"
+sudo apt install figlet -y >& /dev/null
+
 figlet "wanna continure installing all the packages?"
 echo   "wanna continure installing all the packages?"
 
+select yn in "Yes" "No"; do
+    case $yn in
+        Yes ) sleep 1; break;;
+        No ) exit;;
+    esac
+done
+
+
 # packages
 figlet "$ apt"
-sudo apt install -y curl wget zsh node npm git htop 
+sudo apt install -y curl wget zsh node npm git htop >& /dev/null
 
 # micro
 figlet "$ Micro"
@@ -20,12 +30,14 @@ curl -sL https://getmic.ro/ | sudo bash
 
 # p10k
 figlet "$ p10k"
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k >> /dev/null
 echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
 
 echo "configurate zsh"
 
 # zshconfig
-figlet "My ZSH config"
+figlet "$ ZSH config"
 wget https://sh.derzombiiie.com/.zshrc    -O ~/.zshrc
 wget https://sh.derzombiiie.com/.p10k.zsh -O ~/.p10k.zsh
+figlet "Done installing"
+echo "have fun!"
