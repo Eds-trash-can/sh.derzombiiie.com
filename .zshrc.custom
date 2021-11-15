@@ -1,0 +1,28 @@
+# ////////////////////
+# // sh.derzombiiie //
+# // customization  //
+# // by derz        //
+# ////////////////////
+
+# cntrl + left / right
+bindkey ";5D" backward-word
+bindkey ";5C" forward-word
+
+# Pos1 (home) & Ende (End) keys
+bindkey '^[[H' beginning-of-line
+bindkey '^[[F' end-of-line
+
+# cntrl + o for file selector
+bindkey -s "^o" 'micro $(fzf)^M'
+
+bindkey "^R" history-incremental-search-backward
+
+# alias stuff
+alias l ="ls -l"
+alias la="ls -la"
+alias lh="ls -halt"
+
+# history:
+export HISTFILE=~/.zsh_history
+export HISTSIZE=100000
+export SAVEHIST=100000

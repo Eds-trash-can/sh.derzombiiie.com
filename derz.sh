@@ -31,7 +31,11 @@ echo "configurate zsh"
 
 # zshconfig
 figlet "$ ZSH config"
-wget https://sh.derzombiiie.com/.zshrc    -O ~/.zshrc
-wget https://sh.derzombiiie.com/.p10k.zsh -O ~/.p10k.zsh
+wget https://sh.derzombiiie.com/.zshrc.custom -O ~/.zshrc.custom
+echo ""                        >> ~/.zshrc
+echo "# sh.derz customization" >> ~/.zshrc
+echo "source ~/.zshrc.custom"  >> ~/.zshrc
+echo "# ---"                   >> ~/.zshrc
+
 figlet "Done installing"
 echo "have fun!"
