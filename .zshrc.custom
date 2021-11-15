@@ -12,13 +12,16 @@ bindkey ";5C" forward-word
 bindkey '^[[H' beginning-of-line
 bindkey '^[[F' end-of-line
 
+# delete key:
+bindkey 'e[e~' delete-char
+
 # cntrl + o for file selector
 bindkey -s "^o" 'micro $(fzf)^M'
 
 bindkey "^R" history-incremental-search-backward
 
 # alias stuff
-alias l ="ls -l"
+alias l="ls -l"
 alias la="ls -la"
 alias lh="ls -halt"
 
