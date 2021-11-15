@@ -10,14 +10,8 @@ sudo apt install figlet -y >& /dev/null
 
 figlet "wanna continure installing all the packages?"
 echo   "wanna continure installing all the packages?"
-
-select yn in "Yes" "No"; do
-    case $yn in
-        Yes ) sleep 1; break;;
-        No ) exit;;
-    esac
-done
-
+echo   "if not just CNTRL+c (sleep 5)"
+sleep  5
 
 # packages
 figlet "$ apt"
