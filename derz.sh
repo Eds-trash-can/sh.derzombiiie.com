@@ -13,29 +13,12 @@ echo   "wanna continure installing all the packages?"
 echo   "if not just CNTRL+c (sleep 5)"
 sleep  5
 
-# packages
-figlet "$ apt"
-sudo apt install -y curl wget zsh node npm git htop >& /dev/null
-
-# micro
-figlet "$ Micro"
-cd /bin/
-curl -sL https://getmic.ro/ | sudo bash
-
-# p10k
-figlet "$ p10k"
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k >> /dev/null
-echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
-
-echo "configurate zsh"
-
-# zshconfig
-figlet "$ ZSH config"
-wget https://sh.derzombiiie.com/.zshrc.custom -O ~/.zshrc.custom
-echo ""                        >> ~/.zshrc
-echo "# sh.derz customization" >> ~/.zshrc
-echo "source ~/.zshrc.custom"  >> ~/.zshrc
-echo "# ---"                   >> ~/.zshrc
+# fuck off now its a repo
+cd ~
+git clone https://github.com/DerZombiiie/setup
+cd setup
+sh ./install.sh
+sh ./install_additional.sh
 
 figlet "Done installing"
-echo "have fun!"
+echo "have fun and fuck off!"
