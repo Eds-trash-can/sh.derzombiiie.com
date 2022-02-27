@@ -1,5 +1,5 @@
 # sh.derzombiiie.com
-This is the auto setup for useful packages & zsh
+autosetup for DerZombiiie/setup
 
 ### how 2 install:
 
